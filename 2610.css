@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    background-color: #eef1f7;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.parte1, .parte2, .parte3, .parte4, .parte5, .parte6 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.parte1 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    background-color: #e8e8e8;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.parte1 .logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.parte1 .logo svg {
+    width: 60%;
+    height: 60%;
+    stroke: black;
+    stroke-width: 1.5;
+}
+
+.parte1 .carrito {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    color: #333;
+}
+
+.parte1 .carrito svg {
+    width: 100%;
+    height: 100%;
+    stroke: #333;
+    stroke-width: 1.5;
+}
+
+.parte1 .menu1 {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    font-size: 16px;
+}
+
+.parte1 .menu1 a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.parte1 .menu1 a.home {
+    background-color: #4a3f35;
+    color: white;
+}
+
+
+.parte1 h2 {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color:black;
+    font-weight: bold;
+}
+
+
+.parte1 h1 {
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    font-family: 'Impact', sans-serif;
+    font-size: 12rem;
+    color:black;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+.parte1 .logo_cafe1 {
+    position: absolute;
+    right: 10%;
+    bottom: 80%;
+    top: 1%;
+    width: 750px;
+    height: 750px;
+    background-image: url('imagenes/logo_cafe1.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.parte2 {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.parte2 .menu2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.parte2 .menu2 a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.parte2 .menu2 a:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -25px;
+    color: #ccc;
+    font-weight: normal;
+}
+
+.parte2 .menu2 a.coffee { 
+    color: black;
+    border-bottom: 2px solid #4a3f35;
+}
+
+.parte2 .logo_cafe2 {
+    position: absolute;
+    top: 50%; 
+    left: 15%;
+    transform: translateY(-50%); 
+    width: 600px; 
+    height: 600px;
+    background-image: url('imagenes/cafeparte2.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; 
+}
+
+
+.parte2 h3 {
+    position: absolute;
+    top: 30%; 
+    right: 15%;
+    font-family: 'Impact', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.1;
+    text-align: right;
+    width: 400px; 
+}
+
+.parte2 h4 {
+    position: absolute;
+    top: 40%;
+    right: 22%;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    color: #4a3f35;
+    font-weight: bold;
+    text-align: right;
+    width: 400px;
+    }
+
+.parte2 p { 
+    position: absolute;
+    top: 48%;
+    right: 15%;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: right;
+    width: 400px;
+}
+
+.parte2 form {
+    position: absolute;
+    bottom: 20%; 
+    right: 15%; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.parte2 form input[type="number"] {
+    width: 100px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #4a3f35;
+}
+
+
+.parte2 form .add_to_cart {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.parte3 {
+    background-color: #f7f7f7; 
+    min-height: 100vh;
+    padding: 80px 100px; 
+    display: grid;
+    gap: 40px 30%;
+    position: relative;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.parte3 h3 {
+    font-size: 2.8rem;
+    color: #333;
+    line-height: 1.2;
+    font-weight: bold;
+    align-self: center; 
+}
+
+.parte3 p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    align-self: center; 
+}
+
+.parte3 .tarjetas1 {
+    grid-column: 1 / 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px; 
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3 {
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: contain;
+    background-position: center ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tarjeta1 {
+    background-color: #4a3f35;
+    background-image: url('imagenes/manos.png');
+}
+
+.tarjeta2 {
+    background-color: #c7bda1;
+    background-image: url('imagenes/taza.png');
+}
+
+.tarjeta3 {
+    background-color: #4a3f35;
+    background-image: url('imagenes/cafe.png');
+}
+
+.tarjeta1 h4, .tarjeta2 h4, .tarjeta3 h4 {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.parte3 .imagen3y4 {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s linear infinite;
+    background-color: #f7f7f7;
+}
+
+
+
+.parte4 {
+    background-color: #f0f0f0;
+    padding: 60px 20px 80px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+.parte4 h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.tarjetas2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+.tarjeta4, .tarjeta5, .tarjeta6, .tarjeta7 {
+    position: relative; 
+    background-color: white; 
+    border-radius: 15px;
+    text-align: left;
+}
+
+.tarjeta4{
+    background-color: orange;
+}
+
+.tarjeta4 .info-container,
+.tarjeta5 .info-container,
+.tarjeta6 .info-container,
+.tarjeta7 .info-container {
+    padding: 20px;
+    position: relative; 
+}
+
+.tarjeta4::before, .tarjeta5::before, .tarjeta6::before, .tarjeta7::before {
+    content: '';
+    position: absolute;
+    background-color: #4a3f35;
+    border-radius: 50px 50px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tarjeta4::after, .tarjeta5::after, .tarjeta6::after, .tarjeta7::after {
+    content: '';
+    position: absolute;
+    background-image: url('imagenes/tazap5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.3));
+    
+}
+
+
+.tarjeta4 {
+    width: 280px;
+    padding-top: 130px; 
+}
+.tarjeta4::before { 
+    width: 220px;
+    height: 120px;
+    top: 10px;
+}
+.tarjeta4::after { 
+    width: 280px;
+    height: 280px;
+    top: -140px; 
+}
+
+.tarjeta5, .tarjeta6, .tarjeta7 {
+    width: 200px;
+    padding-top: 80px; 
+}
+.tarjeta5::before, .tarjeta6::before, .tarjeta7::before { 
+    width: 150px;
+    height: 90px;
+    top: -10px;
+}
+.tarjeta5::after, .tarjeta6::after, .tarjeta7::after {
+    width: 200px;
+    height: 200px;
+    top: -110px;
+}
+
+.tag {
+    background-color: #e59c58;
+    color: #4a3f35;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+}
+
+.info-container p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.info-container h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add_to_cart_p4 {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add_to_cart_p4:hover {
+    background-color: #555;
+}
+
+.pagination-dots {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #4a3f35;
+}
+.parte5 {
+    background-color: #f0f0f0;
+    width: 100%;
+    min-height: 70vh;
+    padding: 80px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.contenido-p5 {
+    flex: 1;
+    max-width: 550px;
+}
+
+.contenido-p5 h2 {
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contenido-p5 p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    background-color: #4a3f35;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 5px;
+    border: 3px solid #4a3f35;
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+}
+
+.subscribe-form input::placeholder {
+    color: #b0a9a2;
+}
+
+.subscribe-button {
+    border: none;
+    background-color: #e59c58;
+    color: #4a3f35;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #d88a45;
+}
+
+.imagen-p5 {
+    flex: 1;
+    max-width: 500px;
+    height: 400px;
+    background-image: url('imagenes/p5.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- ESTILOS PARA LA PARTE 6 (FOOTER) --- */
+
+.parte6 {
+    background-color: #4a3f35;
+    color: #dcdcdc;
+    padding: 80px 100px 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Columna 1: About */
+.footer-about {
+    flex: 1;
+    flex-basis: 30%; /* Le da más espacio a la primera columna */
+    min-width: 250px;
+}
+
+.footer-about h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #b0a9a2;
+}
+
+/* Estilos para las columnas de enlaces (.page y .links) */
+.page, .links, .contacts {
+    flex: 1;
+    min-width: 170px;
+}
+
+.page h3, .links h3, .contacts h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.page a, .links a {
+    display: block;
+    text-decoration: none;
+    color: #b0a9a2;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.page a:hover, .links a:hover {
+    color: white;
+}
+
+/* Estilos para la columna de contactos */
+.contacts p {
+    color: #b0a9a2;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Línea divisora */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #635649;
+    margin-bottom: 30px;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b0a9a2;
+}
