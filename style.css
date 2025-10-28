@@ -211,16 +211,28 @@ main {
 
 
 
+.parte2 .estrellas {
+    position: absolute;
+    top: 40%;
+    right: 33%;
+    font-size: 1.5rem;
+    color: #d4af37;
+    text-align: right;
+    width: 100px;
+    letter-spacing: 5px;
+    margin-right: 10px;
+}
+
 .parte2 h4 {
     position: absolute;
     top: 40%;
-    right: 22%;
+    right: 25%;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 2rem;
     color: #4a3f35;
     font-weight: bold;
     text-align: right;
-    width: 400px;
+    width: 150px;
     }
 
 
@@ -249,8 +261,8 @@ main {
 .selector-cantidad {
     display: flex;
     align-items: center;
-    background-color: #4a3f35; /* Color oscuro del diseño */
-    border-radius: 50px; /* Completamente redondeado */
+    background-color: #4a3f35;
+    border-radius: 50px;
     color: white;
     padding: 5px;
 }
@@ -366,7 +378,7 @@ main {
 
 .parte3 .imagen3y4 {
     position: absolute;
-    bottom: 40px;
+    bottom: -50px;
     right: 60px;
     width: 100px;
     height: 100px;
@@ -376,6 +388,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #f7f7f7;
+    z-index: 10;
 }
 
 
